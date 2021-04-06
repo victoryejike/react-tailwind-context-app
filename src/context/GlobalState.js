@@ -12,8 +12,9 @@ const initialstate = {
     ]
 }
 
-export const GlobalContext = createContext(initialstate);
+export const GlobalContext = createContext(initialstate); //Creates a context for our application and specifies the value
 
+//This is afunction which holds the application state to be shared by all components
 export const GlobalProvider = ({ children }) => {
     const [state, dispatch] = useReducer(appReducer, initialstate)
 
